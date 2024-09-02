@@ -1,0 +1,41 @@
+.trending-container {
+  margin: 12vh 0 10vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.trending-container h2 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.trending-container button {
+  border: 1px solid transparent;
+  margin: 0 10px;
+  padding: 5px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 12px;
+  transition: border-bottom 0.4s ease;
+}
+
+.trending-container button.active {
+  border-bottom: 1px solid #000;
+}
+
+.trending-container button:hover {
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+.trending-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 5vh 0 10vh 0;
+}
