@@ -10,6 +10,7 @@
 .trending-container h2 {
   font-weight: 600;
   font-size: 26px;
+  color: #333333;
 }
 
 .trending-container button {
@@ -37,5 +38,42 @@
   align-items: center;
   justify-content: center;
   gap: 50px;
-  padding: 5vh 0 10vh 0;
+  padding-top: 4vh;
+}
+
+.qualities{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  flex-wrap: wrap;
+  background-color: #222222;
+  padding: 60px;
+  color: #fff;
+}
+
+.quality-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.qualities .quality-item i{
+  color: #cc9966;
+  font-size: 24px;
+  /* font-weight: 300; */
+}
+.qualities .quality-item .desc{
+  color: #777777;
+  font-size: 13px;
+}
+
+.arrival-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  margin: 2vh 14vh;
 }

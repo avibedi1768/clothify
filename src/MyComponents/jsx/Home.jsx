@@ -11,6 +11,24 @@ import prod_3_1 from './../../images/product-3-1.jpg'
 import prod_3_2 from './../../images/product-3-2.jpg'
 import prod_4_1 from './../../images/product-4-1.jpg'
 import prod_4_2 from './../../images/product-4-2.jpg'
+import product_5_1 from './../../images/product-5-1.jpg';
+import product_5_2 from './../../images/product-5-2.jpg';
+import product_6_1 from './../../images/product-6-1.jpg';
+import product_6_2 from './../../images/product-6-2.jpg';
+import product_7_1 from './../../images/product-7-1.jpg';
+import product_7_2 from './../../images/product-7-2.jpg';
+import product_8_1 from './../../images/product-8-1.jpg';
+import product_8_2 from './../../images/product-8-2.jpg';
+import product_9_1 from './../../images/product-9-1.jpg';
+import product_9_2 from './../../images/product-9-2.jpg';
+import product_10_1 from './../../images/product-10-1.jpg';
+import product_10_2 from './../../images/product-10-2.jpg';
+import product_11_1 from './../../images/product-11-1.jpg';
+import product_11_2 from './../../images/product-11-2.jpg';
+import product_12_1 from './../../images/product-12-1.jpg';
+import product_12_2 from './../../images/product-12-2.jpg';
+import Footer from './Footer'
+
 
 function Home() {
   const allTrendingData = [
@@ -51,6 +69,17 @@ function Home() {
     console.log(trendingItem)
   }
 
+  const arrivals = [
+    { image1: product_5_1, image2: product_5_2, type: "Clothing", name: "Tie-detail Top", price: "Rs. 399" },
+    { image1: product_6_1, image2: product_6_2, type: "Shoes", name: "Sandals", price: "Rs. 1299" },
+    { image1: product_7_1, image2: product_7_2, type: "Bags", name: "Small Bucket Bag", price: "Rs. 1499" },
+    { image1: product_8_1, image2: product_8_2, type: "Clothing", name: "Denim Jacket", price: "Rs. 3499" },
+    { image1: product_9_1, image2: product_9_2, type: "Clothing", name: "Short Wrap Dress", price: "Rs. 1799" },
+    { image1: product_10_1, image2: product_10_2, type: "Clothing", name: "Biker Jacket", price: "Rs. 3499" },
+    { image1: product_11_1, image2: product_11_2, type: "Shoes", name: "Loafers", price: "Rs. 999" },
+    { image1: product_12_1, image2: product_12_2, type: "Clothing", name: "Super Skinny High Jeggings", price: "Rs. 1299" }
+  ];
+
   return (
     <div>
       <Hero />
@@ -77,7 +106,53 @@ function Home() {
           ))}
         </div>
       </div>
+      {/* <hr style={{ margin: '1vh 25vh', opacity: '0.5' }} /> */}
 
+      <div className="qualities">
+        <div className='quality-item'>
+          <i className='fas fa-truck'></i>
+          <p className='title'>Payment & Delivery</p>
+          <p className='desc'>Free shipping for orders over $50</p>
+        </div>
+
+        <div className='quality-item'>
+          <i className='fas fa-rotate-left'></i>
+          <p className='title'>Return & Refund</p>
+          <p className='desc'>Free 100% money back guarantee</p>
+        </div>
+
+        <div className='quality-item'>
+          <i className='fas fa-lock'></i>
+          <p className='title'>Secure Payment</p>
+          <p className='desc'>100% secure payment</p>
+        </div>
+
+        <div className='quality-item'>
+          <i className='fas fa-headphones'></i>
+          <p className='title'>Quality Support</p>
+          <p className='desc'>Alway online feedback 24/7</p>
+        </div>
+      </div>
+
+      <div className="arrivals">
+        <h2 style={{ textAlign: 'center', marginTop: '5vh', color: '#333333' }}>NEW ARRIVALS</h2>
+
+        <div className="arrival-container">
+          {arrivals.map((item, index) => (
+            <Trending
+              key={index}
+              image1={item.image1}
+              image2={item.image2}
+              type={item.type}
+              name={item.name}
+              price={item.price}
+            />
+          ))}
+        </div>
+      </div>
+      {/* <hr style={{ margin: '1vh 25vh', opacity: '0.5' }} /> */}
+
+      <Footer />
     </div>
   )
 }

@@ -14,7 +14,7 @@ function Navbar() {
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/cart"><i className="fas fa-cart-plus"></i></Link></li>
       </ul>
-      <p><Link to="tel:+918146004250">+918146004250</Link></p>
+      <p><Link to="tel:+918146004250">+91 81460 04250</Link></p>
     </nav>
   )
 }
