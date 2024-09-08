@@ -27,7 +27,7 @@ import product_11_1 from './../../images/product-11-1.jpg';
 import product_11_2 from './../../images/product-11-2.jpg';
 import product_12_1 from './../../images/product-12-1.jpg';
 import product_12_2 from './../../images/product-12-2.jpg';
-import Footer from './Footer'
+// import Footer from './Footer'
 
 
 function Home() {
@@ -85,7 +85,7 @@ function Home() {
       <Hero />
       <IntroBoxes />
 
-      <div className="trending-container">
+      <div className="trending-container" id='trending'>
         <h2>TRENDING</h2>
         <div className="trending-buttons">
           <button onClick={all_trending} className={`trending-all ${activeButton === 'all' ? 'active' : ''}`}>ALL</button>
@@ -134,7 +134,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="arrivals">
+      <div className="arrivals" id='arrivals'>
         <h2 style={{ textAlign: 'center', marginTop: '5vh', color: '#333333' }}>NEW ARRIVALS</h2>
 
         <div className="arrival-container">
@@ -152,7 +152,7 @@ function Home() {
       </div>
       {/* <hr style={{ margin: '1vh 25vh', opacity: '0.5' }} /> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

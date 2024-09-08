@@ -3,7 +3,9 @@ import './../css/single_intro_box.css'
 
 function SingleIntroBox({ gender, image }) {
   var styling = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${image})`
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${image})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover'
   }
   return (
     <div style={styling} className='single-intro-box-parent'>

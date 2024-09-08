@@ -1,17 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
 import './../css/Navbar.css'
 import AOS from 'aos'
+// import logo from './../../images/logo-sleek.png'
 
 function Navbar() {
   AOS.init();
   return (
     <nav id="navbar" data-aos="zoom-in" data-aos-duration="2000">
-      <h1><Link to="/">CLOTHIFY</Link></h1>
+      <h1><HashLink smooth to="/#">CLOTHIFY</HashLink></h1>
+      {/* <img src={logo} alt="" /> */}
       <ul id='link-container'>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/shop"> Shop</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li><HashLink smooth to="/#">Home</HashLink></li>
+        <li><HashLink smooth to="#trending"> Trending</HashLink></li>
+        <li><HashLink smooth to="#arrivals">New Arrivals</HashLink></li>
         <li><Link to="/cart"><i className="fas fa-cart-plus"></i></Link></li>
       </ul>
       <p><Link to="tel:+918146004250">+91 81460 04250</Link></p>

@@ -26,15 +26,18 @@
 .hero-parent .hero-btn {
   background-color: transparent;
   border: 1px solid #fff;
-  transition-duration: 0.6s;
+  transition: 0.5s;
   color: #fff;
   padding: 16px;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .hero-parent .hero-btn:hover {
-  transition-duration: 0.6s;
+  transition: 0.5s;
   background-color: #fff;
   color: #cc9966;
   cursor: pointer;
+  /* font-size: 18px; */
+  font-weight: 800;
 }
