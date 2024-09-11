@@ -37,9 +37,9 @@
   display: block;
 }
 .trending-parent:hover .trending-btn {
-  visibility: visible;
+  visibility: visible !important;
 }
-.trending-parent:hover .trending-texts{
+.trending-parent:hover .trending-texts {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -57,7 +57,7 @@
   color: #ccc;
 }
 
-.trending-texts{
+.trending-texts {
   width: 100%;
   padding-bottom: 18px;
   /* border: 1px solid grey; */

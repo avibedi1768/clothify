@@ -25,9 +25,9 @@ function Footer() {
 
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <p><i className='fas fa-phone'></i> <a href="tel:+918146004250">+91 81460 04250</a></p>
-          <p> <i className="fas fa-envelope"></i> <a href="mailto:arshbedi2517@gmail.com">arshbedi2517@gmail.com</a></p>
-          <Link to="/"><i className="fas fa-cart-plus"></i> Go to Cart</Link>
+          <p><i className='fas fa-phone'></i> &nbsp; <a href="tel:+918146004250">+91 81460 04250</a></p>
+          <p> <i className="fas fa-envelope"></i> &nbsp; <a href="mailto:arshbedi2517@gmail.com">arshbedi2517@gmail.com</a></p>
+          <Link to="/"><i className="fas fa-cart-plus"></i>&nbsp;&nbsp; Go to Cart</Link>
         </div>
 
         <div className="footer-socials">
@@ -44,7 +44,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>@ 2024 Clothify. All rights reserved.</p>
+        <p>Copyright © 2024 Clothify. Website developed by <a href="https://avibedi1768.github.io/" target='_blank' rel="noreferrer" style={{ color: 'white', textDecoration: 'none' }}>APS Bedi</a>.</p>
       </div>
 
     </footer>

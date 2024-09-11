@@ -15,7 +15,7 @@ function Navbar() {
         <li><HashLink smooth to="/#">Home</HashLink></li>
         <li><HashLink smooth to="#trending"> Trending</HashLink></li>
         <li><HashLink smooth to="#arrivals">New Arrivals</HashLink></li>
-        <li><Link to="/cart"><i className="fas fa-cart-plus"></i></Link></li>
+        <li><Link to="/checkout"><i className="fas fa-cart-plus"></i></Link></li>
       </ul>
       <p><Link to="tel:+918146004250">+91 81460 04250</Link></p>
     </nav>
