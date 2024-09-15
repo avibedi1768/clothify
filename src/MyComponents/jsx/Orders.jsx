@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ref, get } from 'firebase/database';
+import { ref, get, update } from 'firebase/database';
 import { database } from '../../firebase';
 
 const Orders = ({ status }) => {
@@ -33,6 +33,25 @@ const Orders = ({ status }) => {
     fetchOrders();
   }, [status]);
 
+  // Function to handle completing the order
+  const handleCompleteOrder = async (orderId) => {
+    const confirmed = window.confirm('Are you sure you want to mark this order as completed?');
+    if (!confirmed) return;
+
+    try {
+      await update(ref(database, `orders/${orderId}`), {
+        status: 'completed'
+      });
+      alert('Order marked as completed!');
+
+      // Re-fetch the data to move the completed order to the correct section
+      setOrders(prevOrders => prevOrders.filter(order => order.id !== orderId));
+      window.location.reload();
+    } catch (error) {
+      alert('Failed to update order status: ' + error.message);
+    }
+  };
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
@@ -54,10 +73,18 @@ const Orders = ({ status }) => {
                   <p><strong>Price:</strong> {order[key].price}</p>
                 </div>
               ))}
+
             {/* Displaying order details */}
             <p><strong>Address:</strong> {order.address}</p>
             <p><strong>Phone Number:</strong> {order.phoneNumber}</p>
             <p><strong>Status:</strong> {order.status}</p>
+
+            {/* Show "Complete Order" button only for pending orders */}
+            {status === 'pending' && (
+              <button onClick={() => handleCompleteOrder(order.id)}>
+                Complete Order
+              </button>
+            )}
           </div>
         ))
       )}
